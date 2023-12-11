@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        width: 400px;
+      }
+      .tab-content {
+        display: none;
+        padding-top: 20px;
+      }
+
+      .active {
+        display: block;
+      }
+
+      .tab {
+        cursor: pointer;
+        padding: 10px;
+        margin: 5px;
+        background-color: #ddd;
+        display: inline-block;
+      }
+      .tab.active {
+        background-color: #599ff7;
+        color: #fff;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="online" href="https://tools.yeshaojun.com/house">线上计算</a>
+    <div class="wrapper">
+        <div class="tab" id="tab1">房贷计算器</div>
+        <div class="tab" id="tab2">定投计算器</div>
+        <div class="tab" id="tab3">收益计算器</div>
+    </div>
+  
+    <!-- Tab Content -->
+    <div class="tab-content" id="content1">
+        <div class="fotm-item">
+            <span>贷款金额</span>
+            <input type="text" class="account" placeholder="请输入整数">
+            <span>万</span>
+        </div>
+        <div class="fotm-item">
+            <span>贷款年限</span>
+            <input type="text" class="year" placeholder="请输入整数">
+        </div>
+        <div class="fotm-item">
+            <span>贷款利息</span>
+            <input type="text" class="rate" placeholder="请输入数字">
+        </div>
+        <div class="fotm-item">
+            <span>贷款方式</span>
+            <select class="method">
+                <option value="等额本息">等额本息</option>
+                <option value="等额本金">等额本金</option>
+            </select>
+        </div>
+    </div>
+  
+    <div class="tab-content" id="content2">
+      <div class="fotm-item">
+        <span>每月定投金额</span>
+        <input type="text" class="d-account" placeholder="请输入整数">
+        <span>元</span>
+      </div>
+      <div class="fotm-item">
+        <span>定投年限</span>
+        <input type="text" class="d-year" placeholder="请输入整数">
+        <span>年</span>
+      </div>
+      <div class="fotm-item">
+        <span>预期年化收益</span>
+        <input type="text" class="d-rate" placeholder="请输入整数">
+        <span>%</span>
+      </div>
+    </div>
+  
+    <div class="tab-content" id="content3">
+      <div class="fotm-item">
+        <span>历年收益</span>
+        <input type="text" class="s-rate" placeholder="收益请用英文分号分割">
+      </div>
+      <p style="color:#999;font-size: 12px;">例如第一年收益100%，第二年收益-50%：则可以输入100，-50。此时实际收益为0，算术均值收益为25%，几何均值为0%。</p>
+    </div>
+
+    <p class="error">格式错误</p>
+    <button id="cal-fd">计算</button>
+    <div class="result">
+
+    </div>
+    <script src="./juqery.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

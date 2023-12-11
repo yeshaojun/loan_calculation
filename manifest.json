@@ -1,0 +1,31 @@
+{
+    "name": "Ctools",
+    "description": "一个计算房贷，理财收益的小工具",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "permissions": [
+        "storage",
+        "unlimitedStorage",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": [
+            "background/background.js" 
+        ]
+    },
+    "content_scripts": [
+        {
+          "all_frames": false,
+          "js": [
+            "scripts/content.js"
+          ],
+          "matches": ["<all_urls>"],
+          "run_at": "document_start"
+        }
+      ],
+      "web_accessible_resources": ["*.html", "*.js", "*.css"]
+}
