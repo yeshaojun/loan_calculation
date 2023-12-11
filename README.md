@@ -10,4 +10,4 @@
 
 除了房贷之后，还可以计算定投收益以及真正的理财年化收益率。
 
-在线本本，可访问https://tools.yeshaojun.com/house查看
+在线版本，可访问https://tools.yeshaojun.com/house查看
