@@ -11,3 +11,10 @@
 除了房贷之后，还可以计算定投收益以及真正的理财年化收益率。
 
 在线版本，可访问https://tools.yeshaojun.com/house查看
+
+# 使用方式
+
+1. git clone 或者下载压缩包
+2. 访问 chrome://extensions/
+3. 选择加载已解压的扩展程序
+4. 选择下载的文件目录
